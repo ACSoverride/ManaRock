@@ -3,9 +3,9 @@ body, html {
 }
 
 .thebg {
-	background-color: white;
-	filter: blur(10px);
-	height: 100%;
+	background: url(whiteBG.jpg) no-repeat center center fixed;
+	background-size: cover;
+
 }
 
 .centertext {
