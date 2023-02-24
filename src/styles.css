@@ -3,22 +3,19 @@ body, html {
 }
 
 .thebg {
-	background-image: url("https://images.pexels.com/photos/312839/pexels-photo-312839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background-color: white;
 	filter: blur(10px);
 	height: 100%;
 }
 
 .centertext {
-	color: white;
+	color: black;
 	font-weight: bold;
-	border: 3px solid #f1f1f1;
+	border: 3px solid black	;
 	position: absolute;
-	top: 10%;
+	top: 10vh;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 2;
 	width: 80%;
 	padding: 20px;
 	text-align: center;
@@ -26,15 +23,22 @@ body, html {
 }
 
 .p1 {
-	color: white;
+	color: black;
 	font-weight: bold;
 	position: absolute;
-	top: 25%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 2;
-	width: 80%;
-	padding: 30px;
-	text-align: center;
+	top: 25vh;
 	font-size: 40px;
+}
+
+.p2 {
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.a1 {
+	position: absolute;
+	top: 43vh;
+	left: 15vw;
+	width: 70%;
 }
