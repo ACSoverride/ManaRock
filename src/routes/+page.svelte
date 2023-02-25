@@ -33,9 +33,14 @@
 				<span slot="header">For players by a player</span>
 				<P class="p2" align="center">
 					ManaRock is built for Magic players by a Magic player. The site will remain completely free for all users.
-					The code is 100% open source and liscenced under the GPLv3
+					The code is 100% open source and licenced under the GPLv3
 				</P>
 			</AccordionItem>
 		</Accordion>
 	</div>
 </div>
+<style>
+	:global(body) {
+		background-image: url('$lib/images/newBG.jpg');
+	}
+</style>

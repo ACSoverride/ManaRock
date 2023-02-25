@@ -1,13 +1,3 @@
-body, html {
-	height: 100%;
-}
-
-.thebg {
-	background-color: white;
-	filter: blur(10px);
-	height: 100%;
-}
-
 .centertext {
 	color: black;
 	font-weight: bold;
