@@ -41,6 +41,9 @@
 </div>
 <style>
 	:global(body) {
-		background-image: url('$lib/images/newBG.jpg');
+		background: url('$lib/images/newBG.jpg') no-repeat center center fixed;
+		background: cover;
+		height: 100%;
+		overflow: hidden;
 	}
 </style>
