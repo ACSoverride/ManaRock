@@ -6,6 +6,7 @@
 	async function setKV(){
 		await MainTest.put("TestKey", "TestValue");
 	}
+	setKV();
 </script>
 <div class="thebg"></div>
 <div class="p-8">
