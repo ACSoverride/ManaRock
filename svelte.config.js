@@ -4,9 +4,6 @@ import adapter from '@sveltejs/adapter-cloudflare';
 const config = {
     kit: {
 		adapter: adapter(),
-        alias: {
-            'setKV': 'functions/setKV.js'
-        }
 	},
 
     preprocess: [preprocess({
