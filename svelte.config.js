@@ -6,7 +6,7 @@ const config = {
 		adapter: adapter(),
 		vite: {
 			optimizeDeps:{
-        			exclude: ['instantsearch.js']
+        			exclude: ['setKV.js']
       			},
 		}
 	},
