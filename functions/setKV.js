@@ -1,3 +1,3 @@
-export async function setKeyValue (key, value) {
+export async function setKeyValue (context, key, value) {
   await MainTest.put(key, value);
 }
