@@ -3,7 +3,7 @@
 	import { Blockquote } from 'flowbite-svelte'
 	import '/src/styles.css'
 	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem} from 'flowbite-svelte'
-	import setKeyValuefrom from "setKV"
+	import setKeyValue from "setKV"
 	setKeyValue("testValue", "testKey")
 </script>
 <div class="thebg"></div>
