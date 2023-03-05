@@ -3,6 +3,10 @@
 	import { Blockquote } from 'flowbite-svelte'
 	import '/src/styles.css'
 	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem} from 'flowbite-svelte'
+	async setKV(key, value){
+		await MainTest.put(key, value);
+	}
+	setKV("testkey", "testvalue");
 </script>
 <div class="thebg"></div>
 <div class="p-8">
