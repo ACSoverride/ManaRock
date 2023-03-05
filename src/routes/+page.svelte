@@ -3,9 +3,8 @@
 	import { Blockquote } from 'flowbite-svelte'
 	import '/src/styles.css'
 	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem} from 'flowbite-svelte'
-	export async function onRequest(context) {
-		await context.env.MainTest.put("TestKey", "TestValue");
-	}
+	import setKeyValue from 'functions/setKV.js'
+	setKeyValue("testValue", "testKey")
 </script>
 <div class="thebg"></div>
 <div class="p-8">
