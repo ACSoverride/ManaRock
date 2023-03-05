@@ -5,7 +5,7 @@ const config = {
     kit: {
 		adapter: adapter(),
         alias: {
-            'setKV': 'functions/setKV'
+            'setKV': 'functions/setKV.js'
         }
 	},
 
