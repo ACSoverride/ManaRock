@@ -24,7 +24,7 @@
 					you the best experience possible
 				</P>
 			</AccordionItem>
-			<AccordionItem>
+			<AccordionItem>i
 				<span slot="header">API</span>
 				<P class="p2" align="center">
 					ManaRock uses the Scryfall API allowing access to almost any card you can

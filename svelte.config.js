@@ -3,7 +3,12 @@ import adapter from '@sveltejs/adapter-cloudflare';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		vite: {
+			optimizeDeps:{
+        			exclude: ['instantsearch.js']
+      			},
+		}
 	},
 
     preprocess: [preprocess({
