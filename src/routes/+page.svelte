@@ -50,8 +50,4 @@
 		height: 100%;
 		overflow: hidden;
 	}
-	.searchbar {
-		position: absolute;
-		top: 53vh;
-	}
 </style>
