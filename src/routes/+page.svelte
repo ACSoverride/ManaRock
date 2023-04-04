@@ -1,8 +1,12 @@
 <script>
 	import { AccordionItem, Alert } from 'flowbite-svelte';
 	import { Blockquote } from 'flowbite-svelte'
-	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem, Label, Input} from 'flowbite-svelte'
-	import * as Scry from "scryfall-sdk";
+	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem, Label, Input, Button} from 'flowbite-svelte'
+	import {onMount} from 'svelte';
+	let cardName = "";
+	let cardImage = "https://api.scryfall.com/cards/named?format=image&fuzzy=" + cardName;
+
+	
 </script>
 <div class="thebg"></div>
 <div class="p-8">
@@ -40,8 +44,8 @@
 	</div>
 	<div class="MainContent">
 		<div class="SearchInput">
-			<Label for='large-input' class='block mb-2'>Large input</Label>
-  			<Input id="large-input" size="lg" placeholder="Search" />
+			<input value={cardName}>
+			<img src={cardImage}>
 		</div>	
 	</div>	
 </div>
@@ -50,7 +54,7 @@
 	.SearchInput {
 		position: absolute;
 		top: 70vh;
-		left: 50vh;
+		left: 60vh;
 		
 	}
 
