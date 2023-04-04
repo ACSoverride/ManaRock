@@ -37,8 +37,8 @@
 				</P>
 			</AccordionItem>
 		</Accordion>
-	</div class="searchbar">
-	<div>
+	</div>
+	<div class="searchbar">
 		<Label for='large-input' class='block mb-2'>Large input</Label>
 		<Input id="large-input" size="lg" placeholder="Large input" />
 	</div>
