@@ -2,7 +2,8 @@
 	import { AccordionItem, Alert } from 'flowbite-svelte';
 	import { Blockquote } from 'flowbite-svelte'
 	import '/src/styles.css'
-	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem} from 'flowbite-svelte'
+	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem, Label, Input} from 'flowbite-svelte'
+	import * as Scry from "scryfall-sdk";
 </script>
 <div class="thebg"></div>
 <div class="p-8">
@@ -38,7 +39,14 @@
 			</AccordionItem>
 		</Accordion>
 	</div>
+	<div class="MainContent">
+		<div class="SearchInput">
+			<Label for='large-input' class='block mb-2'>Large input</Label>
+  			<Input id="large-input" size="lg" placeholder="Large input" />
+		</div>	
+	</div>	
 </div>
+
 <style>
 	:global(body) {
 		background: url('$lib/images/newBG.jpg') no-repeat center center fixed;
