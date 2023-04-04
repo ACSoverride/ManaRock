@@ -1,7 +1,6 @@
 <script>
 	import { AccordionItem, Alert } from 'flowbite-svelte';
 	import { Blockquote } from 'flowbite-svelte'
-	import '/src/styles.css'
 	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem, Label, Input} from 'flowbite-svelte'
 	import * as Scry from "scryfall-sdk";
 </script>
@@ -53,5 +52,38 @@
 		background: cover;
 		height: 100%;
 		overflow: hidden;
+	}
+	.centertext {
+		color: black;
+		font-weight: bold;
+		border: 3px solid black	;
+		position: absolute;
+		top: 10vh;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		padding: 20px;
+		text-align: center;
+		font-size: 40px;
+	}
+
+	.p1 {
+		color: black;
+		font-weight: bold;
+		position: absolute;
+		top: 25vh;
+		font-size: 40px;
+	}
+	.p2 {
+		color: black;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.a1 {
+		position: absolute;
+		top: 43vh;
+		left: 15vw;
+		width: 70%;
 	}
 </style>
