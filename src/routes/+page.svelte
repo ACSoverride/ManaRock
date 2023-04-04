@@ -3,8 +3,8 @@
 	import { Blockquote } from 'flowbite-svelte'
 	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem, Label, Input, Button} from 'flowbite-svelte'
 	import {onMount} from 'svelte';
-	let cardName = "";
-	let cardImage = "https://api.scryfall.com/cards/named?format=image&fuzzy=" + cardName;
+	let cardName = "Swamp";
+	let cardImage = "https://api.scryfall.com/cards/named?format=image&version=small&fuzzy=" + cardName;
 
 	
 </script>
@@ -44,8 +44,8 @@
 	</div>
 	<div class="MainContent">
 		<div class="SearchInput">
-			<input value={cardName}>
-			<img src={cardImage}>
+			<input bind:value={cardName}>
+			<img src="https://api.scryfall.com/cards/named?format=image&version=small&fuzzy={cardName}" alt="magic card">
 		</div>	
 	</div>	
 </div>
