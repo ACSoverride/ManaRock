@@ -37,6 +37,7 @@
 		"classnames": "^2.3.2",
 		"flowbite": "^1.6.3",
 		"flowbite-svelte": "^0.30.4",
+		"scryfall-sdk": "^4.1.1",
 		"svelte-preprocess-import-assets": "^0.2.6"
 	}
 }
