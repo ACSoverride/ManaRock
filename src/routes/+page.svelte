@@ -41,7 +41,7 @@
 	<div class="MainContent">
 		<div class="SearchInput">
 			<Label for='large-input' class='block mb-2'>Large input</Label>
-  			<Input id="large-input" size="lg" placeholder="Large input" />
+  			<Input id="large-input" size="lg" placeholder="Search" />
 		</div>	
 	</div>	
 </div>
@@ -49,7 +49,7 @@
 <style>
 	.SearchInput {
 		position: absolute;
-		top: 60vh;
+		top: 70vh;
 		left: 50vh;
 		
 	}
