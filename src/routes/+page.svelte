@@ -47,6 +47,13 @@
 </div>
 
 <style>
+	.SearchInput {
+		position: absolute;
+		top: 60vh;
+		left: 50vh;
+		
+	}
+
 	:global(body) {
 		background: url('$lib/images/newBG.jpg') no-repeat center center fixed;
 		background: cover;
