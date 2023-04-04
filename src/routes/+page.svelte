@@ -52,5 +52,6 @@
 	}
 	.searchbar {
 		position: absolute;
+		top: 53vh:
 	}
 </style>
