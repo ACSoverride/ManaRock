@@ -3,10 +3,21 @@
 	import { Blockquote } from 'flowbite-svelte'
 	import {  Heading, P, A, Mark, Secondary, Hr, Accordion, ActivityItem, Label, Input, Button} from 'flowbite-svelte'
 	import {onMount} from 'svelte';
-	let cardName = "Swamp";
+	let cardName = "";
 	let cardImage = "https://api.scryfall.com/cards/named?format=image&version=small&fuzzy=" + cardName;
-
-	
+	let userID = ""
+	let postText = ""
+	async function doPost () {
+		const res = await fetch('https://kvupdate.mattinhvt.workers.dev/', {
+			method: 'POST',
+			body: postText
+			})
+	}
+	function handleClick(){
+		let cName = cardName.replace(/\s/g, '');
+		postText = userID + cName + " true";
+		doPost();
+	}
 </script>
 <div class="thebg"></div>
 <div class="p-8">
@@ -44,8 +55,12 @@
 	</div>
 	<div class="MainContent">
 		<div class="SearchInput">
-			<input bind:value={cardName}>
+			<Label for='default-input' class='block mb-2'>User ID</Label>
+  			<Input id='default-input' placeholder="Default input" bind:value={userID} />
+			<Label for='large-input' class='block mb-2'>Search</Label>
+  			<Input id="large-input" size="lg" placeholder="Large input" bind:value={cardName}/>
 			<img src="https://api.scryfall.com/cards/named?format=image&version=small&fuzzy={cardName}" alt="magic card">
+			<Button on:click={handleClick}>Add</Button>
 		</div>	
 	</div>	
 </div>
@@ -53,7 +68,7 @@
 <style>
 	.SearchInput {
 		position: absolute;
-		top: 70vh;
+		top: 55vh;
 		left: 60vh;
 		
 	}
@@ -93,7 +108,7 @@
 
 	.a1 {
 		position: absolute;
-		top: 43vh;
+		top: 20vh;
 		left: 15vw;
 		width: 70%;
 	}
