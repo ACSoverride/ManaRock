@@ -17,7 +17,8 @@
 	}
 	async function doPost2 () {
 		let sender = userID + cardName;
-		const value = await env.NAMESPACE.get(sender);
+		const value = await env.worker-test.get(sender);
+		console.log(value);
 	}
 	function handleClick(){
 		let cName = cardName.replace(/\s/g, '');
