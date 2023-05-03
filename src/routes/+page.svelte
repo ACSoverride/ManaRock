@@ -10,13 +10,20 @@
 	var postReturn = "";
 	let checkText = ""
 	async function doPost () {
-		fetch('https://kvupdate.mattinhvt.workers.dev/', {
+		const res = await fetch('https://kvupdate.mattinhvt.workers.dev/', {
+			method: 'POST',
+			body: postText
+		})
+	}
+	async function doPost2 () {
+		fetch('https://kvgrab.mattinhvt.workers.dev/', {
 			method: 'POST',
 			body: postText
 		})
 			.then((Response) => Response.json())
 			.then((json) => postReturn = json.stringify());
 	}
+
 	function handleClick(){
 		let cName = cardName.replace(/\s/g, '');
 		postText = userID + cName + " true";
@@ -24,7 +31,7 @@
 	}
 
 	function getClick(){
-		doPost();
+		doPost2();
 		console.log(postReturn);
 		if (postReturn === checkText){
 			checkText = "That card is in your collection";
