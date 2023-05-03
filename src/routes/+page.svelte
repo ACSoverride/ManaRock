@@ -7,16 +7,31 @@
 	let cardImage = "https://api.scryfall.com/cards/named?format=image&version=small&fuzzy=" + cardName;
 	let userID = ""
 	let postText = ""
+	var postReturn = "";
+	let checkText = ""
 	async function doPost () {
-		const res = await fetch('https://kvupdate.mattinhvt.workers.dev/', {
+		fetch('https://kvupdate.mattinhvt.workers.dev/', {
 			method: 'POST',
 			body: postText
-			})
+		})
+			.then((Response) => Response.json())
+			.then((json) => postReturn = json.stringify());
 	}
 	function handleClick(){
 		let cName = cardName.replace(/\s/g, '');
 		postText = userID + cName + " true";
 		doPost();
+	}
+
+	function getClick(){
+		doPost();
+		console.log(postReturn);
+		if (postReturn === checkText){
+			checkText = "That card is in your collection";
+		}
+		else {
+			checkText = "That card is not in your collection";
+		}
 	}
 </script>
 <div class="thebg"></div>
@@ -60,7 +75,9 @@
 			<Label for='large-input' class='block mb-2'>Search</Label>
   			<Input id="large-input" size="lg" placeholder="Large input" bind:value={cardName}/>
 			<img src="https://api.scryfall.com/cards/named?format=image&version=small&fuzzy={cardName}" alt="magic card">
-			<Button on:click={handleClick}>Add</Button>
+				<Button on:click={handleClick}>Add</Button>
+				<Button on:click={getClick}>Check</Button>
+				<P class="mb-3" align="center" bind:vale={checkText}></P>
 		</div>	
 	</div>	
 </div>
