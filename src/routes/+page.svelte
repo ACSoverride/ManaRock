@@ -16,14 +16,9 @@
 		})
 	}
 	async function doPost2 () {
-		fetch('https://kvgrab.mattinhvt.workers.dev/', {
-			method: 'POST',
-			body: postText
-		})
-			.then((Response) => Response.json())
-			.then((json) => postReturn = json.stringify());
+		let sender = userID + cardName;
+		const value = await env.NAMESPACE.get(sender);
 	}
-
 	function handleClick(){
 		let cName = cardName.replace(/\s/g, '');
 		postText = userID + cName + " true";
