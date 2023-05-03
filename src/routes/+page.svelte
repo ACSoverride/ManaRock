@@ -7,8 +7,8 @@
 	let cardImage = "https://api.scryfall.com/cards/named?format=image&version=small&fuzzy=" + cardName;
 	let userID = ""
 	let postText = ""
-	var postReturn = "";
-	let checkText = ""
+	let postReturn;
+	let check;
 	async function doPost () {
 		const res = await fetch('https://kvupdate.mattinhvt.workers.dev/', {
 			method: 'POST',
@@ -16,12 +16,14 @@
 		})
 	}
 	async function doPost2 () {
-		let sender = userID + cardName;
+		let sender = " " + userID + cardName;
 		var http = new XMLHttpRequest();
 		var url = "https://kvgrab.mattinhvt.workers.dev/";
 		http.open('POST', url, true);
+		http.onload = () => {
+			postReturn = JSON.stringify(http.responseText);
+		}
 		http.send(sender);
-		postReturn = http.responseText;
 	}
 	function handleClick(){
 		let cName = cardName.replace(/\s/g, '');
@@ -32,11 +34,11 @@
 	function getClick(){
 		doPost2();
 		console.log(postReturn);
-		if (postReturn === checkText){
-			checkText = "That card is in your collection";
+		if (postReturn.includes("true") === true){
+			check = true;
 		}
 		else {
-			checkText = "That card is not in your collection";
+			check = false;
 		}
 	}
 </script>
@@ -83,7 +85,11 @@
 			<img src="https://api.scryfall.com/cards/named?format=image&version=small&fuzzy={cardName}" alt="magic card">
 				<Button on:click={handleClick}>Add</Button>
 				<Button on:click={getClick}>Check</Button>
-				<P class="mb-3" align="center" bind:vale={checkText}></P>
+				{#if check === true}
+					<P class="mb-3" align="center">That card is in your deck</P>
+				{:else}
+					<P class="mb-3" align="center">That card is not in your deck</P>
+				{/if}
 		</div>	
 	</div>	
 </div>
