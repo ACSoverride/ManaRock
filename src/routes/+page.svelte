@@ -17,8 +17,11 @@
 	}
 	async function doPost2 () {
 		let sender = userID + cardName;
-		const value = await env.worker-test.get(sender);
-		console.log(value);
+		var http = new XMLHttpRequest();
+		var url = "https://kvgrab.mattinhvt.workers.dev/";
+		http.open('POST', url, true);
+		http.send(sender);
+		postReturn = http.responseText;
 	}
 	function handleClick(){
 		let cName = cardName.replace(/\s/g, '');
